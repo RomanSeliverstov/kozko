@@ -10,7 +10,6 @@ using System.Xml.Linq;
 
 
 
-
 namespace ConsoleApplication6
 
 {
@@ -18,7 +17,7 @@ namespace ConsoleApplication6
     {
         static void Main(string[] args)
         {
-            wall Wall = new wall();
+            wall Wall = new wall(false);
 
             Console.WriteLine("Ссылка на пост: " + "https://vk.com/wall" + Wall.getMaxLikePost());
           

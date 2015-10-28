@@ -13,7 +13,6 @@ C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\b
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\ConsoleApplication6.pdb
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\obj\Debug\ConsoleApplication6.csprojResolveAssemblyReference.cache
 C:\Users\Roman\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe.config
 C:\Users\Roman\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\obj\Debug\ConsoleApplication6.exe
 C:\Users\Roman\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\obj\Debug\ConsoleApplication6.pdb
@@ -22,3 +21,18 @@ C:\Users\Roman\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\b
 C:\Users\Roman\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Roman\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Roman\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\obj\Debug\ConsoleApplication6.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\MySql.Data.dll
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\nunit.framework.dll
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\bin\Debug\nunit.framework.xml
+C:\Users\Admin\Documents\Visual Studio 2013\Projects\APIvk\ConsoleApplication6\obj\Debug\ConsoleApplication6.csprojResolveAssemblyReference.cache
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe.config
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\obj\Debug\ConsoleApplication6.exe
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\obj\Debug\ConsoleApplication6.pdb
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\bin\Debug\ConsoleApplication6.pdb
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\bin\Debug\MySql.Data.dll
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\bin\Debug\nunit.framework.dll
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\bin\Debug\nunit.framework.xml
+C:\Users\Roman\Documents\Visual Studio 2013\Projects\maxlike\ConsoleApplication6\obj\Debug\ConsoleApplication6.csprojResolveAssemblyReference.cache
