@@ -18,8 +18,7 @@ namespace ConsoleApplication6
         static void Main(string[] args)
         {
             wall Wall = new wall(false);
-
-            Console.WriteLine("Ссылка на пост: " + "https://vk.com/wall" + Wall.getMaxLikePost());
+           Console.WriteLine(Wall.getMaxLikePost(Wall.getFriendsId(Wall.getMyId("https://vk.com/seliverstov_roman"))));
           
             Console.ReadLine();
         }

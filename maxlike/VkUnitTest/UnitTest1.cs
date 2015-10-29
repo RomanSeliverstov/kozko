@@ -24,5 +24,16 @@ namespace VkUnitTest
             CollectionAssert.AreEqual(friendsIds, testFriendsIds);
         }
 
+        [TestMethod]
+        public void TestFriendsMaxLikes()
+        {
+
+            int[] usersIds = new int[5] {38010036, 40349766, 40511435, 42208446, 43153393};
+            string friendsIds = Wall.getMaxLikePost(usersIds);
+            string result = "38010036_23172 Количество: 3";
+            Assert.AreEqual(friendsIds,result);
+        }
+        
+
      }
 }

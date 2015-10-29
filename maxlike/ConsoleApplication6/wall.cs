@@ -35,9 +35,7 @@ namespace ConsoleApplication6
         {
 
             string User = user;
-
-           //string User = "https://vk.com/seliverstov_roman";
-           User = User.Substring("https://vk.com/".Length);
+            User = User.Substring("https://vk.com/".Length);
            string UserId = response.Send("https://api.vk.com/method/users.get?user_ids={0}", User);
            jsonObj = JObject.Parse(UserId);
            UserId = Convert.ToString(jsonObj["response"][0]["uid"]);
@@ -46,18 +44,8 @@ namespace ConsoleApplication6
 
         }
 
-        public string Link()
-        {
-            return "https://vk.com/seliverstov_roman";
-        }
-
-        public string Id()
-        {
-            string myId = getMyId(Link());
-            return myId;
-        }
-
-        public int[] getFriendsId(string Id)
+       
+         public int[] getFriendsId(string Id)
         {
             string friendsIds = response.Send("https://api.vk.com/method/friends.get?user_id={0}", Id);
             jsonObj = JObject.Parse(friendsIds);
@@ -67,19 +55,19 @@ namespace ConsoleApplication6
             for (int i = 0; i < friendsIdsArray.Length; i++)
             {
                 friendsIdsArray[i] = Convert.ToInt32(jsonObj["response"][i]);
-                Console.WriteLine(friendsIdsArray);
+                
             }
             
             return friendsIdsArray;
         }
 
-        public string getMaxLikePost()
+        public string getMaxLikePost(int[] massiv)
         {
             string wallPosts = "";
             int maxLike = 0;
             int maxPostId = 0;
             int idWithMaxLikes = 0;
-            int[] friendsIdsArray = getFriendsId(Id());
+            int[] friendsIdsArray = massiv;
 
             for (int i = 0; i < friendsIdsArray.Length; i++)
             {
@@ -113,7 +101,7 @@ namespace ConsoleApplication6
              
                     
             }
-            string maxlike = idWithMaxLikes.ToString() + "_" + maxPostId.ToString();
+            string maxlike = idWithMaxLikes.ToString() + "_" + maxPostId.ToString() + " Количество: "+ maxLike.ToString();
             
      
             return maxlike;
