@@ -8,17 +8,13 @@ using System.IO;
 
 namespace ConsoleApplication6
 {
-    class VkResponse : IVkResponse
+    public class VkResponse : IVkResponse
     {
-        HttpWebRequest myRequest;
-        HttpWebResponse myResponse;
-        StreamReader myStream;
-        String response;
-        public string Send(string request, string param)
+         public string Send(string request, string param)
         {
-            myRequest = (HttpWebRequest)HttpWebRequest.Create(String.Format(request, param));
-            myResponse = (HttpWebResponse)myRequest.GetResponse();
-            myStream = new StreamReader(myResponse.GetResponseStream(), Encoding.UTF8);
+            HttpWebRequest myRequest = (HttpWebRequest)HttpWebRequest.Create(String.Format(request, param));
+            HttpWebResponse myResponse = (HttpWebResponse)myRequest.GetResponse();
+            StreamReader myStream = new StreamReader(myResponse.GetResponseStream(), Encoding.UTF8);
             return myStream.ReadToEnd();
         }
     }

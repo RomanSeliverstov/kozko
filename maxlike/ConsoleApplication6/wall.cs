@@ -14,64 +14,59 @@ using System.IO;
 
 namespace ConsoleApplication6
 {
-    public class wall
+    public class Wall
     {
-        JObject jsonObj;
+        
         IVkResponse response;
-
-        public wall(bool isTest)
+       
+        public Wall(IVkResponse currentResponse)
         {
-            if (isTest)
-            {
-                response = new TestVkResponse();
-            }
-            else
-            {
-                response = new VkResponse();
-            }
+            this.response = currentResponse;
         }
+      
 
-        public string getMyId(string user)
+        public string ParseVkLink(string linkVk)
         {
+            JObject jsonObj;
+            linkVk = linkVk.Substring("https://vk.com/".Length);
+            linkVk = response.Send("https://api.vk.com/method/users.get?user_ids={0}", linkVk);
+            jsonObj = JObject.Parse(linkVk);
+            string userId = Convert.ToString(jsonObj["response"][0]["uid"]);
 
-            string User = user;
-            User = User.Substring("https://vk.com/".Length);
-           string UserId = response.Send("https://api.vk.com/method/users.get?user_ids={0}", User);
-           jsonObj = JObject.Parse(UserId);
-           UserId = Convert.ToString(jsonObj["response"][0]["uid"]);
-
-           return UserId;
+            return userId;
 
         }
 
        
-         public int[] getFriendsId(string Id)
+         public int[] GetIdsFriends(string userId)
         {
-            string friendsIds = response.Send("https://api.vk.com/method/friends.get?user_id={0}", Id);
-            jsonObj = JObject.Parse(friendsIds);
-            int[] friendsIdsArray;
-            friendsIdsArray = new int[jsonObj["response"].Count()];
+            JObject jsonObj;
+            string idsFriends = response.Send("https://api.vk.com/method/friends.get?user_id={0}", userId);
+            jsonObj = JObject.Parse(idsFriends);
+            int[] idsFriendsArray;
+            idsFriendsArray = new int[jsonObj["response"].Count()];
             
-            for (int i = 0; i < friendsIdsArray.Length; i++)
+            for (int i = 0; i < idsFriendsArray.Length; i++)
             {
-                friendsIdsArray[i] = Convert.ToInt32(jsonObj["response"][i]);
+                idsFriendsArray[i] = Convert.ToInt32(jsonObj["response"][i]);
                 
             }
             
-            return friendsIdsArray;
+            return idsFriendsArray;
         }
 
-        public string getMaxLikePost(int[] massiv)
+        public string GetMaxLike(int[] idsFriendsArray)
         {
+            JObject jsonObj;
             string wallPosts = "";
             int maxLike = 0;
             int maxPostId = 0;
             int idWithMaxLikes = 0;
-            int[] friendsIdsArray = massiv;
+           
 
-            for (int i = 0; i < friendsIdsArray.Length; i++)
+            for (int i = 0; i < idsFriendsArray.Length; i++)
             {
-                wallPosts = response.Send("https://api.vk.com/method/wall.get?owner_id={0}", friendsIdsArray[i].ToString());
+                wallPosts = response.Send("https://api.vk.com/method/wall.get?owner_id={0}", idsFriendsArray[i].ToString());
                 jsonObj = JObject.Parse(wallPosts);
 
                 if (jsonObj["response"] != null)
@@ -85,15 +80,13 @@ namespace ConsoleApplication6
                             var currentPostId = Convert.ToInt32(result.Next["id"]);
                             var currentLike = Convert.ToInt32(result.Next["likes"]["count"]);
                             
-                         
-
-                            if (currentLike > maxLike)
-                            {
-                                maxLike = currentLike;
-                                maxPostId = currentPostId;
-                                idWithMaxLikes = friendsIdsArray[i];
-                            }
-                        }
+                                if (currentLike > maxLike)
+                                  {
+                                     maxLike = currentLike;
+                                     maxPostId = currentPostId;
+                                     idWithMaxLikes = idsFriendsArray[i];
+                                  }
+                         }
 
                     }
                 }

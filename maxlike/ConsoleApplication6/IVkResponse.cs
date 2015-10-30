@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApplication6
 {
     
-    internal interface IVkResponse
+   public interface IVkResponse
     {
         string Send(string request, string param);
     }
