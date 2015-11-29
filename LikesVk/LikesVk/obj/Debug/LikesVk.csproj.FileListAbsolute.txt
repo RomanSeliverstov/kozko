@@ -1,0 +1,9 @@
+c:\users\roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\bin\Debug\LikesVk.exe.config
+c:\users\roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\bin\Debug\LikesVk.exe
+c:\users\roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\bin\Debug\LikesVk.pdb
+c:\users\roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\bin\Debug\Newtonsoft.Json.dll
+c:\users\roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\bin\Debug\Newtonsoft.Json.xml
+c:\users\roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\obj\Debug\LikesVk.csprojResolveAssemblyReference.cache
+c:\users\roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\obj\Debug\LikesVk.exe
+c:\users\roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\obj\Debug\LikesVk.pdb
+C:\Users\Roman\documents\visual studio 2013\Projects\LikesVk\LikesVk\bin\Debug\MySql.Data.dll
