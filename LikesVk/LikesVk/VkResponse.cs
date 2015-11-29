@@ -8,7 +8,7 @@ using System.IO;
 
 namespace LikesVk
 {
-    class VkResponse
+    public class  VkResponse
     {
        public string Send(string request, string param)
             {

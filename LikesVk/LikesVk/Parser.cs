@@ -9,32 +9,38 @@ using Newtonsoft.Json.Linq;
 
 namespace LikesVk
 {
-    class Parser
+   public class Parser
     {
         VkResponse response = new VkResponse();
         string linq { get; set; }
         string userId;
         string friendId;
-        int[] userFriends;
+        
        
         public Parser(string linq, string friendId)
         {
            this.linq = linq;
-           this.userId = GetUserInfo(linq, 0);
+           this.userId = GetUserInfo(ParserLink(linq), 0);
            this.friendId = friendId;
         }
 
-        public string GetUserInfo(string linkVk, int param)
+       public string ParserLink(string linkVk)
         {
             string info = "";
+            info = linkVk.Substring("https://vk.com/".Length);
+            return info;
+        }
+
+        public string GetUserInfo(string linkVk, int param)
+       {
+            string info = "";
             JObject jsonObj;
-            linkVk = linkVk.Substring("https://vk.com/".Length);
-            linkVk = response.Send("https://api.vk.com/method/users.get?user_ids={0}", linkVk);
+            linkVk = response.Send("https://api.vk.com/method/users.get?user_ids={0}&fields=city&v=5.40", linkVk);
             jsonObj = JObject.Parse(linkVk);
             switch (param)
             {
                 case 0:
-                    info = Convert.ToString(jsonObj["response"][0]["uid"]);
+                    info = Convert.ToString(jsonObj["response"][0]["id"]);
                     userId = info;
                     break;
                 case 1:
@@ -42,6 +48,10 @@ namespace LikesVk
                     break;
                 case 2:
                     info = Convert.ToString(jsonObj["response"][0]["last_name"]);
+                    break;
+                case 3:
+                    if (jsonObj["response"][0]["city"] != null) info = Convert.ToString(jsonObj["response"][0]["city"]["title"]);
+                    else info = "-";
                     break;
             }
 
@@ -51,7 +61,7 @@ namespace LikesVk
         }
 
        
-        public List<int> parseFriendsId()
+        public List<int> ParseFriendsId()
         {
             JObject jsonObj;
             string idsFriends = response.Send("https://api.vk.com/method/friends.get?user_id={0}", userId);
@@ -117,6 +127,8 @@ namespace LikesVk
             }
             return pDate;
         }
+        
+       
 
         public int GetLikes(int postId)
         {
@@ -138,6 +150,28 @@ namespace LikesVk
                 }
             }
             return postLikes;
+        }
+
+        public string GetTextPost(int postId)
+        {
+            JObject jsonObj;
+            string postText = "";
+            string wallPosts = "";
+            wallPosts = response.Send("https://api.vk.com/method/wall.get?owner_id={0}", friendId);
+            jsonObj = JObject.Parse(wallPosts);
+
+            if (jsonObj["response"] != null)
+            {
+
+                foreach (var result in jsonObj["response"])
+                {
+                    if ((result.Next != null) && (Convert.ToInt32(result.Next["id"]) == postId))
+                    {
+                        postText = result.Next["text"].ToString();
+                    }
+                }
+            }
+            return postText;
         }
     }
 

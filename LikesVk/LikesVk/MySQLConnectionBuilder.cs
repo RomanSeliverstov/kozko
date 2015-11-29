@@ -23,11 +23,12 @@ namespace LikesVk
                 return mysqlCSB;
 
             }
-            public string GetLink(string queryString)
+
+            public string GetData(string queryString, string param)
             {
                 string result = "";
                 mysqlCS = connectToBase();
-                
+
 
                 using (con = new MySqlConnection())
                 {
@@ -43,9 +44,9 @@ namespace LikesVk
                         {
                             while (dr.Read())
                             {
-                                result = dr["link"].ToString();
-                                
-                                
+                                result = dr[param].ToString();
+
+
                             }
                         }
                     }
@@ -57,6 +58,7 @@ namespace LikesVk
                 }
                 return result;
             }
+
 
 
             public void InsertIntoTable(string query)
