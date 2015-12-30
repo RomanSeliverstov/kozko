@@ -1,0 +1,9 @@
+c:\users\roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\bin\Debug\ApiVkServer.exe.config
+c:\users\roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\bin\Debug\ApiVkServer.exe
+c:\users\roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\bin\Debug\ApiVkServer.pdb
+c:\users\roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\obj\Debug\ApiVkServer.exe
+c:\users\roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\obj\Debug\ApiVkServer.pdb
+c:\users\roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\bin\Debug\Newtonsoft.Json.dll
+c:\users\roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\obj\Debug\ApiVkServer.csprojResolveAssemblyReference.cache
+C:\Users\Roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\bin\Debug\MySql.Data.dll

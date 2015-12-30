@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkServer", "ApiVkServer\VkServer.csproj", "{0ED4AEDC-F33A-4E70-9FC2-1848D9D0E855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VkUpdater", "VkUpdater\VkUpdater.csproj", "{A2846DA4-9022-4B14-BEC1-11C0D6FE6393}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0ED4AEDC-F33A-4E70-9FC2-1848D9D0E855} = {0ED4AEDC-F33A-4E70-9FC2-1848D9D0E855}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ED4AEDC-F33A-4E70-9FC2-1848D9D0E855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED4AEDC-F33A-4E70-9FC2-1848D9D0E855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED4AEDC-F33A-4E70-9FC2-1848D9D0E855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED4AEDC-F33A-4E70-9FC2-1848D9D0E855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2846DA4-9022-4B14-BEC1-11C0D6FE6393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2846DA4-9022-4B14-BEC1-11C0D6FE6393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2846DA4-9022-4B14-BEC1-11C0D6FE6393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2846DA4-9022-4B14-BEC1-11C0D6FE6393}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
