@@ -24,6 +24,7 @@ namespace ApiVkServer
                  post.userId = userId;
                  post.id = postsId[j];
                  post.Date = Parser.GetDate(ApiVkRequests.GetUserPosts(userId), postsId[j]);
+                 post.likesCount = Parser.GetLikes(ApiVkRequests.GetUserPosts(userId), postsId[j]);
                  posts.Add(post);
              }
 
@@ -38,7 +39,7 @@ namespace ApiVkServer
              List<UserModel> friendsList = new List<UserModel>();
          
              
-             for (int i = 0; i < 10; i++)
+             for (int i = 0; i < 20; i++)
             {
                JObject friendInfo = ApiVkRequests.GetUserInfo(friendsId[i].ToString());
                UserModel friend = new UserModel();
@@ -58,6 +59,7 @@ namespace ApiVkServer
                    postModel.userId = friendsId[i];
                    postModel.id = postsId[j];
                    postModel.Date = Parser.GetDate(ApiVkRequests.GetUserPosts(friendsId[i]),postsId[j]);
+                   postModel.likesCount = Parser.GetLikes(ApiVkRequests.GetUserPosts(friendsId[i]), postsId[j]);
                    postsList.Add(postModel);
                }
 

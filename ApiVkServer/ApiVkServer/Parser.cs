@@ -91,7 +91,7 @@ namespace ApiVkServer
           }
           return pDate;
       }
-      public int GetLikes(JObject jsonObj, int postId)
+      public static int GetLikes(JObject jsonObj, int postId)
       {
           int postLikes = 0;
           if (jsonObj["response"] != null)

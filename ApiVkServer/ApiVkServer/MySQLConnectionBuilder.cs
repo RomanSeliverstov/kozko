@@ -12,7 +12,7 @@ namespace ApiVkServer
     {
         public static  MySqlConnectionStringBuilder ConnectionBuilder()
         {
-            string connectionString = "Server=127.0.0.1;Database=vk_app;Uid=root;CharSet=utf8";
+            string connectionString = "Server=127.0.0.1;Database=vk;Uid=root;CharSet=utf8";
             MySqlConnectionStringBuilder mysqlCSB;
             mysqlCSB = new MySqlConnectionStringBuilder(connectionString);
             return mysqlCSB;
