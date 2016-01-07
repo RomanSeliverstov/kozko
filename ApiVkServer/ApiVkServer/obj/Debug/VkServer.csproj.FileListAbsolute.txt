@@ -7,3 +7,6 @@ C:\Users\Roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\bin
 C:\Users\Roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\obj\Debug\VkServer.csprojResolveAssemblyReference.cache
 C:\Users\Roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\obj\Debug\ApiVkServer.exe
 C:\Users\Roman\documents\visual studio 2013\Projects\ApiVkServer\ApiVkServer\obj\Debug\ApiVkServer.pdb
+C:\Users\Admin\kozko\ApiVkServer\ApiVkServer\bin\Debug\ApiVkServer.exe.config
+C:\Users\Admin\kozko\ApiVkServer\ApiVkServer\obj\Debug\ApiVkServer.exe
+C:\Users\Admin\kozko\ApiVkServer\ApiVkServer\obj\Debug\ApiVkServer.pdb
